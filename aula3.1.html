@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 3.1</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Classe Users
+        class Users {
+
+            // Atributos
+            #name;
+            #email;
+            #password;
+            #birth;
+
+            // Método construtor
+            constructor(userName, userEmail, userPassword) {
+
+                
+                // Construtor executa outros métodos, normalmente "setters"
+                this.setName(userName);
+                this.setEmail(userEmail);
+                this.setPassword(userPassword);
+            }
+
+            setName(userNewName) {
+
+                userNewName = userNewName.trim();
+                this.#name = userNewName;
+
+            }
+
+            setEmail(userNewEmail) {
+
+                userNewEmail = userNewEmail.trim();
+                this.#email = userNewEmail;
+            }
+
+            setPassword(userNewPassword) {
+
+                userNewPassword = userNewPassword.trim();
+                this.#password = userNewPassword;
+            
+            }
+
+            // Setter para birth
+            setBirth(date) {
+                
+                this.#birth = date;
+
+            }
+
+            getName() {
+
+                return this.#name;
+            }
+
+            getEmail() {
+
+                return this.#email;
+            }
+
+            getPassword() {
+
+                return this.#password;
+            }
+
+            getBirth() {
+
+                return this.#birth;
+            }
+
+}
+        
+        // Criando objeto
+        var chefe = new Users('Jeronimo', 'Jero@nimo.com', '123');
+
+        // Exibindo dados do objeto
+        console.log(chefe);
+
+        // Define o atributo birth
+        chefe.setBirth('2000-10-14');
+
+        // Qual o nome de 'chefe'
+        console.log(chefe.getName());
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <script>
+        class Fruta { 
+
+            #name;
+            #sabor;
+            #cor;
+            
+            setName(name) {
+                
+                this.#name = name;
+            }
+
+            setSabor(sabor) {
+
+                this.#sabor = sabor;
+            }
+
+            setCor(cor) {
+
+                this.#cor = cor;
+            }
+
+            getName() {
+
+                return this.#name;
+            }
+
+            getSabor() {
+
+                return this.#sabor;
+            }
+
+            getCor() {
+                return this.#cor;
+            }
+
+        }
+
+        var hortifruti = new Fruta();
+
+        console.log(hortifruti);
+
+
+        var mercado = new Fruta();
+        
+        console.log(mercado);
+
+        hortifruti.setCor('roxo');
+
+        hortifruti.setSabor('Doce');
+
+        hortifruti.setName('Abacate');
+
+        mercado.setSabor('morango');
+
+
+        
+
+        
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>
