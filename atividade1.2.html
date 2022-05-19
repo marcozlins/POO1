@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    </head>
+
+<body>
+
+    <h1>Exercício 1.2</h1>
+    
+    <script>
+    
+// Cria classe 'Carros'
+ 
+class Carro {
+
+// Atributos
+#marca
+#modelo
+#cor
+#ano
+
+// Setters
+setMarca(marca) {
+                
+                this.#marca = marca.trim();
+
+}
+
+setModelo(modelo) {
+                
+                this.#modelo = modelo.trim();
+            
+            }
+
+setCor(cor) {
+                
+                this.#cor = cor.trim();
+            }
+
+setAno(ano) {
+                
+                this.#ano = ano.trim();
+            }
+// Getters
+getMarca() {
+
+return this.#marca;
+}
+
+getModelo() {
+
+return this.#modelo;
+}
+
+getCor() {
+return this.#cor;
+}
+
+getAno() {
+
+    return this.#ano;
+}
+
+}
+
+
+
+// Instância
+let prisma = new Carro();
+
+// Define atributos
+prisma.setMarca('Ford Mustang');
+prisma.setModelo('GT');
+prisma.setCor('preto');
+prisma.setAno('2018');
+
+// Exibe objeto no console
+console.log('prisma: ', prisma);
+
+// Exibe objeto no documento
+document.write(`
+<p>Prisma:</p>
+<ul>
+    <li> ${prisma.getMarca()}; </li>
+    <li> ${prisma.getModelo()}; </li>
+    <li> ${prisma.getCor()}; </li>
+    <li> ${prisma.getAno()}; </li>
+</ul>
+`);
+
+
+
+    
+    
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <script>
+
+        class Serie {
+
+            #titulo
+            #lancamento
+            #conclusao
+            #temporadas
+            #canal
+
+            constructor(titulo) { this.#setTitulo(titulo); }
+
+            #setTitulo(titulo) { this.#titulo = titulo; }
+            setLancamento(lancamento) { this.#lancamento = lancamento; }
+            setConclusao(conclusao) { this.#conclusao = conclusao; }
+            setTemporadas(temporadas) { this.#temporadas = temporadas; }
+            setCanal(canal) { this.#canal = canal; }
+
+            getTitulo() { return this.#titulo;} 
+            getLancamento() { return this.#lancamento;} 
+            getConclusao() { return this.#conclusao;} 
+            getTemporadas() { return this.temporadas;} 
+            getCanal() { return this.#canal;} 
+
+        }
+
+        let vikings = new Serie('Vikings')
+        vikings.setLancamento('2013')
+        vikings.setConclusao('Fim 2020')
+        vikings.setTemporadas('10')
+        vikings.setCanal('Netflix')
+
+        console.log(vikings);
+
+    </script>
+</body>
+</html>

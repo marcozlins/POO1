@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -15,21 +14,25 @@
             #name;
             #sabor;
             #cor;
+
+            // setters
             
             setName(name) {
                 
-                this.#name = name;
+                this.#name = name.trim();
             }
 
             setSabor(sabor) {
 
-                this.#sabor = sabor;
+                this.#sabor = sabor.trim();
             }
 
             setCor(cor) {
 
-                this.#cor = cor;
+                this.#cor = cor.trim();
             }
+
+            // getters
 
             getName() {
 
@@ -56,7 +59,7 @@
         
         console.log(mercado);
 
-        // setters
+        // Defina os atributoss (setters)
 
         hortifruti.setCor('Verde');
 
@@ -72,12 +75,22 @@
 
         mercado.setName('Morango');
 
-        // getters
+        // Exibe no documento (getters)
 
-        console.log(hortifruti.getName());
+        document.write(`
+        
+        <p> ${hortifruti.getName()} (${hortifruti.getSabor()}); </p> 
 
-        console.log(mercado.getSabor());
+       
+        <p> ${mercado.getName()} (${mercado.getSabor()}); </p>
 
+        
+        `); 
+
+
+
+         
+        
 
 
 

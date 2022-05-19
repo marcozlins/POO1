@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+
+        class Animal {
+
+            #nome
+            #especie
+            #dieta
+
+            constructor(nome, especie) {
+                this.setNome(nome);
+                this.setEspecie(especie);
+            }
+
+            getNome() { return this.#nome; }
+            getEspecie() { return this.#especie; }
+            getDieta() { return this.#dieta; }
+
+            setNome(nome) { this.#nome = nome; }
+            setEspecie(especie) { this.#especie = especie; }
+            setDieta(dieta) { this.#dieta = dieta; }
+
+        }
+
+        let cavalo = new Animal('Matuê', 'preto');
+        let gorila = new Animal('Malvadão', 'Branco');
+
+        cavalo.setDieta('mamífero');
+        gorila.setDieta('mamífero');
+
+        console.log('cavalo: ', cavalo);
+        console.log('gorila: ', gorila);
+
+        document.write(`
+
+<h4>Cavalo:</h4>
+<ul>
+    <li>${cavalo.getNome()}</li>
+    <li>${cavalo.getEspecie()}</li>
+    <li>${cavalo.getDieta()}</li>
+</ul>
+
+<h4>Gorila:</h4>
+<ul>
+    <li>${gorila.getNome()}</li>
+    <li>${gorila.getEspecie()}</li>
+    <li>${gorila.getDieta()}</li>
+</ul>
+        
+        `);
+
+    </script>
+</body>
+</html>
