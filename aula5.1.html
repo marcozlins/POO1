@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula5.1</title>
+</head>
+
+<body>
+
+    <script>
+
+class Produto {
+
+#origem
+#preco
+#marca
+#codigo
+#descricao
+
+constructor(codigo) { this.setCodigo(codigo) }
+
+setOrigem(origem) { this.#origem = origem }
+setPreco(preco) { this.#preco = preco }
+setMarca(marca) { this.#marca = marca }
+setCodigo(codigo) { this.#codigo = codigo }
+setDescricao(descricao) { this.#descricao = descricao }
+
+getOrigem() { return this.#origem }
+getPreco() { return this.#preco }
+getMarca() { return this.#marca }
+getCodigo() { return this.#codigo }
+getDescricao() { return this.#descricao }
+
+}
+
+class Vestuario extends Produto {
+
+    #tipo
+    #tamanho
+    #cor
+
+    constructor(codigo, tipo) {
+        super(codigo) // Exucutar o construtor da classe pai
+        this.setTipo(tipo)
+    
+    }
+    
+    setTipo(tipo) { this.#tipo = tipo }
+    setTamanho(tamanho) { this.#tamanho = tamanho }
+    setCor(cor) { this.#cor = cor} 
+
+    getTipo() { return this.#tipo = tipo}
+    getTamanho() { return this.#tamanho = tamanho}
+    getCor() { return this.#cor = cor}
+
+}
+
+class Calca extends Vestuario {
+
+}
+
+var bone = new Vestuario('BON3' , 'Chapéu')
+
+
+var jeans = new Calca('CODIGO' , 'longas')
+
+console.log(jeans)
+
+// Class alimento
+class Alimento extends Produto {
+
+    #nome
+    #quantidade
+    
+    constructor(codigo, nome, quantidade) {
+                super(codigo) // Executar o construtor da classe pai                
+                this.setNome(nome)
+                this.setQuantidade(quantidade)
+            }
+
+    setNome(nome) { this.#nome = nome}
+    getNome() { return this.#nome }
+    setQuantidade(quantidade) { this.#quantidade = quantidade}
+    getQuantidade() { return this.#quantidade }
+
+
+}
+ 
+var beterraba  = new Alimento('777' , 'Beterraba' , '70')
+
+    console.log(beterraba)
+
+
+// Instância de Vestuario, onde o 'codigo' é sempre obrigatório
+var bone = new Vestuario('B0N3' , 'Chapéu')
+
+//Seta atributos do objeto 
+bone.setMarca('Tico-tico') 
+bone.setPreco(100.99)
+bone.setCor('Branco')
+
+// Exibe o objeto 
+console.log("bone: ",bone)
+
+
+bone.setMarca('Tico-tico') 
+
+// Class movel
+class Movel extends Produto {
+
+#pernas;
+#material;
+
+setPernas(pes) { this.#pernas = pes }
+setMaterial(mat) { this.#material = mat }
+
+getPernas() { return this.#pernas }
+getMaterial() { return this.#material }
+
+}
+
+var cadeira = new Movel('t6t67y7y87')
+cadeira.setPernas(4)
+cadeira.setMaterial('ferro')
+cadeira.setDescricao('Cadeira chique')
+console.log(cadeira)
+
+
+    
+    </script>
+    
+</body>
+
+</html>
